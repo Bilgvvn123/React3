@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sergeelt from "./Sergeelt";
 import Onchange from "./Onchange";
+import Spoj from "./Spoj";
 
 const App = () => {
 	const niitAsuultHariult = [
@@ -18,7 +19,9 @@ const App = () => {
 
 			<Sergeelt /> */}
 
-			<Onchange />
+			{/* <Onchange /> */}
+
+			<Spoj />
 		</>
 	);
 };
