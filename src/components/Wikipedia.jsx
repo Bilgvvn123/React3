@@ -3,34 +3,33 @@ import wiki from "wikipedia";
 
 const Wikipedia = () => {
 	const [data, setData] = useState("");
-	const [search, setSearch] = useState("");
+	const [haihUtga, setHaihUtga] = useState("");
 
-	async function aa(s) {
+	async function aa(a) {
 		try {
-			const page = await wiki.page(s);
-			console.log(page);
-			//Response of type @Page object
+			const page = await wiki.page(a);
 			const summary = await page.summary();
-			console.log(summary);
 			setData(summary.extract);
 		} catch (error) {
 			console.log(error);
+			//=> Typeof wikiError
 		}
 	}
 
-	const searchValue = () => {
-		aa(search);
-	};
+	function search1() {
+		aa(haihUtga);
+	}
 
 	return (
 		<div>
 			<input
 				type="text"
 				placeholder="utga"
-				onChange={(e) => setSearch(e.target.value)}
+				onChange={(e) => setHaihUtga(e.target.value)}
 			/>
-			<button onClick={searchValue}>search</button>
-			<div>{data}</div>
+			<button onClick={search1}>haih</button>
+
+			<p>{data.length !== 0 ? data : "No data"}</p>
 		</div>
 	);
 };
