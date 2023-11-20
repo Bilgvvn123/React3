@@ -7,12 +7,14 @@ import Todo from "./Todo";
 import Spoj2 from "./Spoj2";
 import Modal from "./Modal";
 import Calculator from "./Calculator";
+import UseEffect from "./UseEffect";
+
 // import Modal from "react-modal";
 
 const App = () => {
 	return (
 		<>
-			<Calculator />
+			<UseEffect />
 		</>
 	);
 };
