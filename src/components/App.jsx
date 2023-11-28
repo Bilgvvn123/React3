@@ -12,23 +12,23 @@ import Daalgawar from "./Daalgawar";
 
 // import Modal from "react-modal";
 
-import { Link, Route, Routes } from "react-router-dom";
 import Home from "../page/Home";
 import About from "../page/About";
 import Contact from "../page/Contact";
+import Users from "./Users";
+import { Link, Route, Routes } from "react-router-dom";
+import User from "./User";
 
 // npm i react-router-dom
 
 const App = () => {
 	return (
 		<>
-			<Link to="/">Nvvr</Link>
-			<Link to="/about">Tuhai</Link>
-			<Link to="/contact">Holbogdoh</Link>
+			<Link to={"/users"}>Users</Link>
+
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
+				<Route path="/users" element={<Users />} />
+				<Route path="/users/:id" element={<User />} />
 			</Routes>
 		</>
 	);
